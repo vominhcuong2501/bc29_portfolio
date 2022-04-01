@@ -1,0 +1,251 @@
+* {
+    animation-duration: 0.5s;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* HEADER CSS  */
+header {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navbar-brand i {
+    font-size: 40px;
+
+}.navbar-brand span {
+    font-size: 30px;
+    color: white;
+}
+.navbar-nav .nav-item {
+    margin: 0 10px;
+    position: relative;
+}
+.navbar-nav .nav-item::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background-color: green;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+.navbar-nav .nav-link {
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+    transition: all 0.5s;
+}
+.navbar-nav .nav-item.active::after{
+    opacity: 1;
+    width: 100%;
+}
+.navbar-nav .nav-item.active .nav-link {
+    color: green;
+}
+.navbar-nav .nav-item:hover::after {
+    opacity: 1;
+    width: 100%;
+}
+.navbar-nav .nav-item:hover .nav-link {
+    color: green;
+}
+/* END HEADER CSS  */
+
+/* CAROUSEL CSS  */
+.carousel-item {
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel-item:nth-of-type(1) {
+    background-image: url(./../img/finland.jpg);
+}
+.carousel-item:nth-of-type(2) {
+    background-image: url(./../img/mountains.jpg);
+}
+.carousel-item:nth-of-type(3) {
+    background-image: url(./../img/mountains-1.jpg);
+}
+.carousel-caption .img__thumb {
+    margin: 0 auto;
+    width: 150px;
+}
+.carousel-indicators li {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+.carousel-indicators li.active {
+    background-color: green;
+}
+.carousel-item .carousel-text h3 {
+    font-size: 50px;
+}
+.carousel-item .carousel-text p {
+    font-size: 35px;
+}
+/* END CAROUSEL CSS  */
+
+/* PROJECT CSS  */
+.project__title p {
+    margin: 20px 150px;
+    color:  #585858;
+}
+.nav {
+    justify-content: center;
+    margin: 20px 0;
+}
+.nav .nav-item .nav-link {
+    color: #1a1d2d;
+    border: 1px solid #1a1d2d;
+    margin: 0 10px;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: green;
+    color: white;
+    border: 1px solid green;
+    
+}
+.card {
+    margin-top: 30px;
+}
+.card-body {
+    text-align: center;
+}
+.card-body .card-title {
+    font-size: 18px;
+    font-weight: 400;
+}
+.card-body a {
+    color: black;
+    font-weight: 400;
+    transition: all 0.5s;
+}
+.card-body a:hover {
+    text-decoration: none;
+    color: green;
+}
+.card-body p {
+    color: #585858;
+}
+/* END PROJECT CSS  */
+
+/* FEATURE CSS  */
+.feature {
+    padding: 100px 0;
+    background-image: url(./../img/3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+.feature .overlay {
+    background-color: rgba(7,10,12,.72);
+}
+.overlay {
+    background: rgba(39,43,54,.5);
+    position: absolute;
+    left: 0 ;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.feature__title {
+    position: relative;
+    max-width: 750px;
+    margin: 50px auto;
+}
+.feature__item {
+    background-color: rgba(255,255,255,.1);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,.1);
+    transition: all 0.5s;
+}
+.feature__item i {
+    display: block;
+    font-size: 50px;
+    text-align: center;
+    margin: 20px 0;
+}
+.feature__item:hover {
+    background-color: black;
+    border: 1px solid white;
+}
+/* END FEATURE CSS  */
+
+/* AWARD CSS  */
+.award {
+    position: relative;
+    color: #585858;
+}
+.award__bg {
+    background-image: url(./../img/memphis_3.png);
+    background-position: left bottom;
+    background-size: 50% auto;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.award__left {
+    padding: 50px;
+    box-shadow: 0 0 30px 0 rgb(0 0 0 / 30%);;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,.25);
+    border: 1px solid rgba(255,255,255,.18);
+}
+.award__right {
+    padding: 50px 0;
+}
+.award__thumb {
+    display: flex;
+}
+.award__thumb img {
+    width: 20%;
+}
+/* END AWARD CSS  */
+
+/* FOOTER CSS  */
+footer {
+    background-color: #222;
+    padding: 50px 0;
+    text-align: center;
+}
+.footer__main {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #aaa;
+}
+.footer__main a {
+    color: #aaa;
+}
+.footer__main i {
+    font-size: 18px;
+    border: 1px solid #aaa;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 10px;
+}
+.footer__copies {
+    color: #aaa;
+    padding: 30px 0;
+}
+/* END FOOTER CSS  */
